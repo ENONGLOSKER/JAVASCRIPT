@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+    <div class="cotainer">
+        <h1 id="data">Silahkan menekan tombol dibwah!</h1>
+        <button onclick="datas()">Komfirmasi</button>
+    </div>
+
+    <script>
+        let user = {
+            id: 132,
+            nama : "elqusairi",
+            alamat : "sepit.keruak.lotim",
+            ket : function(){
+                return this.id + this.nama;
+            },
+        }
+
+        function datas(){
+            let keterangan = document.getElementById('data').innerHTML='Hello selamat datang!' + user.ket();
+            return keterangan
+        }
+    </script>
+</body>
+</html>
