@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TES 1</title>
+</head>
+<body>
+
+    <h1>Convert Minutes into Seconds</h1>
+    <p>
+        Write a function that takes an integer minutes and converts it to seconds.
+        <br>
+        convert(5) ➞ 300
+        convert(3) ➞ 180
+        convert(2) ➞ 120
+    </p>
+    <hr>
+    <h3>Hasil : </h3>
+    <p id="hasil"></p>
+
+
+    <!-- script -->
+    <script>
+        let data = document.getElementById('hasil')
+        
+        function sum_two_number(a){
+            /*  rumus :
+                1 m = 60 d
+                60 d = 1 m
+                menit ke detik : dikali 60
+                detik ke menit : dibagi 60
+            */ 
+            let jumlah = a*60
+            data.innerHTML= jumlah + ' ' + 'detik'
+            return data
+        }  
+        
+        sum_two_number(2)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TES 1</title>
+</head>
+<body>
+
+    <h1>The Farm Problem</h1>
+    <p>
+        In this challenge, a farmer is asking you to tell him how many legs can be counted among all his animals. The farmer breeds three species:
+        <br>
+        chickens = 2 legs
+        cows = 4 legs
+        pigs = 4 legs
+        <br>
+        The farmer has counted his animals and he gives you a subtotal for each species. You have to implement a function that returns the total number of legs of all the animals.
+        <br>
+        animals(2, 3, 5) ➞ 36
+        animals(1, 2, 3) ➞ 22
+        animals(5, 2, 8) ➞ 50
+    </p>
+    <hr>
+    <h3>Hasil : <span id="hasil"></span> </h3>
+    
+
+
+    <!-- script -->
+    <script>
+        let data = document.getElementById('hasil')
+        let jumlah
+
+        function countTrue(arr){
+            jumlah = arr.filter(value => value === false);
+            // jumlah = arr.filter(Boolean).length
+            return data.innerHTML = jumlah
+        }
+
+    countTrue([true, true, false, true, false])
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TES 1</title>
+</head>
+<body>
+
+    <h1>Return the Sum of Two Numbers</h1>
+    <p>
+        Create a function that takes two numbers as arguments and returns their sum.
+        <br>
+        <br>
+        addition(3, 2) ➞ 5 <br>
+        addition(-3, -6) ➞ -9<br>
+        addition(7, 3) ➞ 10
+    </p>
+    <hr>
+    <h3>Hasil : </h3>
+    <p id="hasil"></p>
+
+
+    <!-- script -->
+    <script>
+        let data = document.getElementById('hasil')
+        
+        function sum_two_number(a,b){
+            let jumlah = a + b
+            data.innerHTML=jumlah
+            
+            return data
+    
+        }  
+        
+        sum_two_number(10,3)
+    </script>
+    
+</body>
+</html>

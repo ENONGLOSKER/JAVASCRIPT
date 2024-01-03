@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TES 1</title>
+</head>
+<body>
+
+    <h1>Return the Next Number from the Integer Passed</h1>
+    <p>
+        Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+        <br>
+        addition(0) ➞ 1
+        addition(9) ➞ 10
+        addition(-3) ➞ -2
+    </p>
+    <hr>
+    <h3>Hasil : </h3>
+    <p id="hasil"></p>
+
+
+    <!-- script -->
+    <script>
+        let data = document.getElementById('hasil')
+        
+        function possibleBonus(a,b){
+            if(a === b){
+                return false;
+            }else{
+                return (b > a && b <= a + 6)
+            }
+        }  
+        
+        let prediksi = possibleBonus(1,5)
+        data.innerHTML= prediksi 
+    </script>
+    
+</body>
+</html>
