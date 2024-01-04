@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - ARROW FUNCTION</title>
+</head>
+<body>
+    <p>
+        Dalam arrow function, Anda tidak perlu menuliskan kata kunci function, dan jika fungsi memiliki satu parameter, tanda kurung bisa dihilangkan. Selain itu, jika fungsi hanya memiliki satu statement, Anda dapat menghilangkan kurung kurawal dan return.
+        <br>
+        Satu hal yang penting diperhatikan adalah bahwa arrow function tidak memiliki konsep this mereka sendiri. Mereka mengambil nilai this dari lingkup di mana mereka dibuat (biasa disebut dengan lexical scoping), yang dapat menghindari masalah umum terkait dengan this pada fungsi biasa.
+    </p>
+
+    <script>
+        // menggunkan fungsi biasa
+        function penjumlahan(a,b){
+            return console.log("penjumlahan ",a + b);
+        }
+
+        // menggunakan arrow function
+        let hello = () => {
+            console.log("hello selamat datang!");
+        }
+        let pengurangan = (a,b) => console.log("pengurangan", a - b);;
+
+        let pembagian = (a,b) => {
+            let hasil = a/b;
+            return console.log("pembagian ",hasil);;
+        }
+
+        let arr = [1,2,3,5,4,8,6,10];
+        let data = arr.map(x => x+x);
+
+        console.log(data);
+        penjumlahan(5,4);
+        hello();
+        pengurangan(5,4);
+        pembagian(10,2);
+
+
+
+    </script>
+</body>
+</html>

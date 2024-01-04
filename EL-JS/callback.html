@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - CALLBACK</title>
+</head>
+<body>
+
+    <h1>Hasil = <span id="data"></span></h1>
+
+    <script>
+        let datas = document.getElementById('data');
+
+        function tambah(a, b, callback){
+            let hasil = a + b;
+            callback(hasil);
+        }
+
+        function tampilkan(hasil){
+            let jumlah = datas.innerHTML=hasil
+            return (jumlah);
+        }
+
+        tambah(4, 11, tampilkan)
+
+    </script>
+    
+</body>
+</html>

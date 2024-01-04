@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - ASY AWAIT</title>
+</head>
+<body>
+    
+    <script>
+        // meggunakan promise
+        function fetchData1(){
+            return new Promise(resolve => {
+                setTimeout(()=> {
+                    resolve("Data dari API 1")
+                },1000);
+            });
+        }
+        
+        function fetchData2() {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve("Data dari API 2");
+                }, 2000);
+            });
+        }
+
+        // menggunakan async await
+        async function fetchData(){
+            try {
+                let data1 = await fetchData1()
+                console.log(data1);
+
+                let data2 = await fetchData2()
+                console.log((data2));
+
+                console.log("proses selesai");
+                
+            } catch (error) {
+                console.log("terjadi kesalahan", error);
+            }
+        }
+
+        fetchData()
+    </script>
+</body>
+</html>

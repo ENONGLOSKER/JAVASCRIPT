@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - THIS</title>
+</head>
+<body>
+
+    <script>
+        // Contoh 1: Fungsi Global
+        function fungsiGlobal() {
+            console.log(this); // Mengacu pada objek global (window di browser)
+        }
+
+        fungsiGlobal();
+
+        // Contoh 2: Fungsi Biasa
+        const objek1 = {
+            nama: "Objek 1",
+            metodeObjek1() {
+                console.log(this); // Mengacu pada objek itu sendiri (objek1)
+            },
+        };
+
+        objek1.metodeObjek1();
+
+        const objek2 = {
+            nama: "Objek 2",
+            metodeObjek2: objek1.metodeObjek1,
+        };
+
+        objek2.metodeObjek2(); // Mengacu pada objek itu sendiri (objek2)
+
+        // Contoh 3: Fungsi Arrow
+            const contohArrow = () => {
+            console.log(this); // Mengacu pada objek global (window di browser)
+        };
+
+        contohArrow();
+
+        // Contoh 4: Fungsi Arrow dalam Metode Objek
+        const objek3 = {
+            nama: "Objek 3",
+            contohMetodeArrow: () => {
+              console.log(this); // Mengacu pada objek global (window di browser), bukan objek3
+            },
+        };
+
+        objek3.contohMetodeArrow();
+
+    </script>
+    
+</body>
+</html>
