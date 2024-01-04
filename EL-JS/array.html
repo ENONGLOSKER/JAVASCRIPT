@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - ARRAY</title>
+</head>
+<body>
+    <p>HASIL : <span id="hasil" style="font-weight: bold;"></span> </p>
+
+    <!-- scrip -->
+    <script>
+        function hasils (h){
+            let tampilkan = document.getElementById('hasil').innerHTML = h;
+            return (tampilkan);
+        }
+
+        // membuat 
+        let data = ['apel','manggis','jeruk','durian'];
+        let dataBaru = [1,2,3,4,5,6,76];
+
+        // menambah
+        data [4] = 'nanas';
+        data.push('anggur');
+
+        // mengupdate index yang sudah ada
+        // data [2] = 'nanas';
+
+        // menghpus
+        // data.pop()
+    
+        // mengakses semua array
+        // hasils(data)
+
+        // mengakses semua array dengan menggabungkan string tertrtentu
+        // hasils(data.join(' - '))
+
+        // menghitung jumlah item, mulai dari 1 tpi kalo mengakses, mulai dari 0
+        // hasils(data.length)
+
+        // mengakses item atau data tertentu
+        // hasils(data[0])
+
+        // menggabungkan array
+        // hasils(data.concat(dataBaru))
+
+        // menghapus item tertentu
+        // let hapus = 1;
+        // data.splice(hapus,1)
+        // hasils(data.join(' - '))
+
+        // looping 
+        // menggunakan function biasa
+        // let arr = data.map(function(element){
+        //     return element;
+        // })
+        
+        // menggunakan arrow function
+        // let arr = data.map((element) => {
+        //     return element;
+        // } )
+
+        let arr = data.map(element => element);
+
+        hasils(arr.sort().join('-'))
+
+    </script>
+</body>
+</html>
