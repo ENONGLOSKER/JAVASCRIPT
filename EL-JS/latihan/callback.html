@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - CALLBACK</title>
+</head>
+<body>
+    
+    <h2 id="waktu"></h2>
+
+    <script>
+        // callback
+        function addElement(){
+            let header = document.createElement("h1");
+            header.textContent="hello selamat pagi";
+
+            document.body.appendChild(header);
+        };
+
+        setTimeout(() => {
+            addElement();
+        }, 2000);
+
+        // setTimeout(addElement, 5000);
+        console.log("program selesai");
+
+        let setTime = () => {
+            let waktu = document.getElementById('waktu');
+            waktu.textContent = new Date() 
+        }
+
+        setInterval(() => {
+            setTime()
+        }, 1000);
+
+
+
+
+    </script>
+    
+</body>
+</html>

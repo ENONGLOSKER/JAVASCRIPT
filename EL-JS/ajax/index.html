@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - AJAX</title>
+</head>
+<body>
+
+    <h1>HASIL CONSUME DATA API:</h1>
+    <h3 id="hasil"></h3>
+
+    <script>
+        function displayData(json){
+            // ambil data ke halaman
+            let respon = document.getElementById('hasil');
+            respon.textContent = json.data;
+        }
+
+
+        const ajax = new XMLHttpRequest();
+        ajax.open('GET','api/api.json');
+        ajax.send();
+
+        // state pemrosesan data
+        /*
+            1 = open / has been called / data sudah di panggil
+            2 = header_recived / has been called and header status are available / sudah dipanggil dan header sdh tersedia
+            3 = loading / downloading responText / sedang mengload data untuk di tampilkan
+            4 = done / complate / data berhasil di ambil
+        */ 
+        ajax.onreadystatechange = function(){
+            console.log(`"State Ready to Change ${ajax.readyState}"`);
+        }
+
+        // buat callback bawaan yaitu load dan buat anonim function untuk hendel respon 
+        ajax.addEventListener("load", function(){
+            if (ajax.status === 200){
+                // conversi ke bentuk json
+                const json = JSON.parse(ajax.responseText);
+                console.log(json.data);
+                // tampilkan data ke halaman
+                displayData(json);
+            }else{
+                displayData({
+                    data:`terjadi kesalahan ${ajax.status}`
+                });
+            }
+            
+           
+        });
+        
+    </script>
+    
+</body>
+</html>
