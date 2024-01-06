@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - ERROR</title>
+</head>
+<body>
+
+
+    <script>
+       try {
+            // Meminta pengguna memasukkan dua angka
+            let angka1 = prompt('Masukkan angka pertama:');
+            let angka2 = prompt('Masukkan angka kedua:');
+
+            // Mengonversi input pengguna ke tipe number
+            angka1 = parseFloat(angka1);
+            angka2 = parseFloat(angka2);
+
+            // Mengecek apakah angka2 bukan nol
+            if (isNaN(angka1) || isNaN(angka2) || angka2 === 0) {
+                throw new Error('Masukkan angka yang valid dan pastikan angka kedua bukan nol.');
+            }
+
+            // Melakukan pembagian
+            let hasilBagi = angka1 / angka2;
+
+            // Menampilkan hasil pembagian
+            console.log(`Hasil pembagian: ${hasilBagi}`);
+            } catch (error) {
+            // Menangani kesalahan yang terjadi
+            console.error('Terjadi kesalahan:', error.message);
+            } finally {
+            // Blok finally akan dijalankan tanpa peduli apakah ada kesalahan atau tidak
+            console.log('Program selesai dijalankan.');
+        }
+
+    </script>
+    
+</body>
+</html>
