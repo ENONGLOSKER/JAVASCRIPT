@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - OOP CONSTRUCTOR</title>
+</head>
+<body>
+
+<script>
+    // construktor function, menggunakan huruf kapital awalnya
+    // function Anggota(){
+    //     // membuat isi diawali dg this
+    //     this.nama = "";
+    //     this.alamat = "";
+    // }
+    function Anggota(nama,alamat){
+        // membuat isi diawali dg this
+        this.nama = nama;
+        this.alamat = alamat;
+
+        // method degan anonim functions
+        this.hello = function(me){
+            console.log(`hello ${this.nama}, perkenalkan saya ${me} selamat datang!`);
+        }
+
+    }
+
+    // inheriten
+    function Admin(nama, alamat, status){ //ambil parameter dari fungsi anggota
+        this. status = status;
+        Anggota.call(this, nama, alamat); //sertakan parameter disaat memanggil fungsi anggota
+    }
+
+    let admin = new Admin('qusairi','sepit','singgel'); // devinisikan isi sesuai dengan parameter
+    admin.hello('zaeul'); //bisa akses isi/method dari fungsi anggota
+    console.log(admin);
+
+    // memaggil, diawali dengan new
+    let user1 = new Anggota("alqusairi", "sepit");
+    // mengambil isi construktor
+    // user1.nama="elqusairi";
+    // menggunakan method
+    user1.hello("el");
+
+    let user2 = new Anggota("elqusairi","lokon");
+    // user2.alamat="lokon";
+
+    console.log(user1);
+    console.log(user2);
+
+</script>
+</body>
+</html>

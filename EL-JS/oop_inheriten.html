@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - OOP INHERITEN</title>
+</head>
+<body>
+
+<script>
+    function Anggota(nama){
+        this.nama = nama;
+        this.hello = function(me){
+            console.log(`hello ${me} salama kenal saya ${this.nama}`);
+        }
+    }
+
+    function Admin(nama, alamat){
+        this.alamat = alamat;
+        Anggota.call(this, nama);
+        
+    }
+
+    let user_admin = new Admin('elqusairi', 'lokon');
+    user_admin.hello('zaenul');
+
+    console.log(user_admin);
+
+</script>
+</body>
+</html>

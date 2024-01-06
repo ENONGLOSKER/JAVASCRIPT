@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - CLASS</title>
+</head>
+<body>
+    <p>
+        class
+        method
+        inheritace
+    </p>
+
+<script>
+    class Anggota{
+        // jika inign menggunakan parameter, maka harus bungkus dengan constructor
+        constructor(nama){
+            this.nama = nama;
+        }
+        // method
+        hello(me){
+            console.log(`hello ${this.nama} perkenalkan saya ${me}`);
+        }
+        
+    }
+
+    // inheritace dengan extends
+    class Admin extends Anggota{
+        // jika menggunakan costruktor saat inherit maka wajib menggunakan super(), sebagai tempat memanggil costruktor anggota jika ada dan jika tidak ada tetep wajib menggunakan super() jika costruktor hanya digunakan di inheritance. serta super hanya dapat di panggil didalam constructor
+        
+        constructor(nama, alamat){
+            super(nama)
+            this.alamat = alamat;
+        }
+    } 
+
+    let user = new Anggota('elqusairi'); //parameter dari constructor
+    user.hello('el') //method dari kelas anggota
+
+    let admin = new Admin('elqusairi','sepit'); 
+    user.hello('el') 
+ 
+    console.log(admin);
+</script>
+    
+</body>
+</html>
