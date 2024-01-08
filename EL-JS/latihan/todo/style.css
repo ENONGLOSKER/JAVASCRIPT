@@ -1,0 +1,78 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+body{
+    color: whitesmoke;
+    background-image: linear-gradient(90deg, rgb(2, 185, 121),rgb(3, 225, 155));
+}
+.container{
+    padding:10px;
+}
+.todo-list{
+    background-image: linear-gradient(90deg, rgb(10, 158, 172), rgb(3, 139, 151));
+    border-radius: 8px;
+    margin: 50px auto;
+    padding: 10px 20px;
+    width: 300px;
+}
+h3{
+    margin: 15px 2px 15px 0;
+}
+.input {
+    padding: 4px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.input input{
+    padding: 4px 8px;
+    width: 200px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+}
+.input input:focus{
+    outline: none;
+    border: 3px solid rgb(45, 233, 195);
+}
+.input button{
+    font-weight: bold;
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(4, 199, 248);
+}
+
+.list-container {
+    background-color: white;
+    border-radius: 6px;
+    color: black;
+    padding: 18px 12px;
+    list-style: none;
+    margin:10px 0;
+}
+.list-container li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+li.checked{
+    color: rgb(185, 185, 185);
+    text-decoration: line-through;
+}
+.list-container li span{
+    background-color: rgb(236, 236, 236);
+    border-radius: 4px;
+    color: rgb(217, 218, 218);
+    padding: 2px 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.list-container li span:hover{
+    background-color: rgb(255, 48, 48);
+}

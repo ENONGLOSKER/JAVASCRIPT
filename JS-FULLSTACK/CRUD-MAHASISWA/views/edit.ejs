@@ -1,0 +1,25 @@
+<!-- views/edit.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Mahasiswa</title>
+</head>
+<body>
+  <h1>Edit Data Mahasiswa</h1>
+  <form action="/edit/<%= mahasiswa.id %>" method="POST">
+    <!-- Perubahan pada nama input -->
+    <input type="hidden" name="_method" value="PUT">
+    <label for="nama">Nama:</label>
+    <input type="text" name="nama" value="<%= mahasiswa.nama %>" required>
+    <!-- Perubahan pada nama input -->
+    <label for="prodi">Prodi:</label>
+    <input type="text" name="prodi" value="<%= mahasiswa.prodi %>" required>
+    <label for="semester">Semester:</label>
+    <input type="number" name="semester" value="<%= mahasiswa.semester %>" required>
+    <button type="submit">Simpan Perubahan</button>
+  </form>
+</body>
+</html>
