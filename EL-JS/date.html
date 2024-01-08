@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - DATE</title>
+</head>
+<body>
+
+    <h3 id="data"></h3>
+    
+    <script>
+        function displayElement(e){
+            document.getElementById("data").innerText=e;
+        }
+
+        let minggu = ["senin", "selasa", "rabu", "kamis", "jum'at","sabtu", "minggu"];
+        let tanggal =  new Date();
+        console.log(tanggal.getFullYear());
+
+        // mengambil tanggal saat ini
+        // displayElement(tanggal.getDate());
+
+        // mengambil hari saat ini dengan inisialisi urutan index pada variabel minggu
+        // displayElement(minggu[tanggal.getDay()]);
+
+        // mengambil tahun saat ini 
+        // displayElement(tanggal.getFullYear());
+
+
+        // waktu
+        // let jam = tanggal.getHours();
+        // let menit = tanggal.getMinutes();
+        // let detik = tanggal.getSeconds();
+        // let waktu = jam + ":" + menit + ":" + detik;
+        // displayElement(waktu);
+
+        // TIME
+        let menit = 1000 * 60;
+        let jam = menit * 60;
+        let hari = jam * 24;
+        let tahun = hari * 365;
+
+        let years = Math.round(Date.now()/tahun);
+        displayElement(years);
+
+
+    </script>
+</body>
+</html>
