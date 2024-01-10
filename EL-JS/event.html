@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - EVENT LISTNER</title>
+</head>
+<style>
+    button{
+        width: 200px;
+        height: 50px;
+        border:  1px solid greenyellow;
+        /* padding: 50px 80px; */
+    }
+</style>
+<body>
+    <button id="button">testing</button>
+
+    <script>
+        const btn = document.querySelector("button");
+        // const btn = document.body;
+
+
+        function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+        }
+
+        function bgChange(e) {
+            const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+            e.target.style.backgroundColor = rndCol;
+            console.log(e);
+        }
+
+        btn.addEventListener("click", bgChange);
+
+    </script>
+    
+</body>
+</html>

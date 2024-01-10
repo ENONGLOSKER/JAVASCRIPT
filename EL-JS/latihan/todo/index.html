@@ -9,13 +9,16 @@
 <body>
     <div class="container">
         <div class="todo-list">
-            <h3><ion-icon name="document-attach"></ion-icon> App Todo</h3>
+            <h3>
+                <ion-icon name="document-attach" style="color: yellow; font-size: 26px; transform: translateY(5px);"></ion-icon> <span style="color: yellow;">Task</span>Todo
+            </h3>
             <div class="input">
                 <input type="text" id="input-box" placeholder="Add the task">
                 <button onclick="addTask()">Add</button>
             </div>
 
             <ul class="list-container" id="list-container">
+               
             </ul>
         </div>
     </div>
@@ -23,50 +26,6 @@
 <!-- scrip -->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-<script>
-    let inputBox = document.getElementById("input-box");
-    let listContainer = document.getElementById("list-container"); // Ganti dengan getElementById
-
-    function addTask() {
-        if (inputBox.value === '') {
-            alert("Input task tidak boleh kosong!");
-        } else {
-            // add and read
-            let li = document.createElement("li");
-            li.innerHTML = inputBox.value;
-            listContainer.appendChild(li);
-            console.log(li);
-
-            // tombol hapus
-            let span = document.createElement("span");
-            span.innerHTML = "\u00d7";
-            li.appendChild(span);
-            saveData();
-        }
-        inputBox.value = "";
-    }
-
-    listContainer.addEventListener("click", function(e) {
-        if(e.target.tagName === "LI"){
-            e.target.classList.toggle("checked");
-            saveData();
-        }else{
-            if(e.target.tagName === "SPAN"){
-                e.target.parentElement.remove();
-                saveData();
-            }
-        }
-    }, false);
-
-    function saveData(){
-        localStorage.setItem("data", listContainer.innerHTML);
-    }
-    function showTask(){
-        listContainer.innerHTML = localStorage.getItem("data");
-    }
-    showTask();
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>

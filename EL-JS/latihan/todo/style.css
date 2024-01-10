@@ -14,6 +14,7 @@ body{
 .todo-list{
     background-image: linear-gradient(90deg, rgb(10, 158, 172), rgb(3, 139, 151));
     border-radius: 8px;
+    box-shadow: 5px 4px 50px rgb(95, 238, 188);
     margin: 50px auto;
     padding: 10px 20px;
     width: 300px;
@@ -39,12 +40,12 @@ h3{
 }
 .input button{
     font-weight: bold;
-    color: whitesmoke;
+    color: rgb(67, 66, 66);
     cursor: pointer;
     padding: 8px 15px;
     border-radius: 6px;
     border: none;
-    background-color: rgb(4, 199, 248);
+    background-image: linear-gradient(35deg, rgb(255, 251, 9),rgb(218, 215, 3));
 }
 
 .list-container {
@@ -56,6 +57,7 @@ h3{
     margin:10px 0;
 }
 .list-container li{
+    position: relative;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
@@ -66,6 +68,8 @@ li.checked{
     text-decoration: line-through;
 }
 .list-container li span{
+    position: absolute;
+    right: 0;;
     background-color: rgb(236, 236, 236);
     border-radius: 4px;
     color: rgb(217, 218, 218);
